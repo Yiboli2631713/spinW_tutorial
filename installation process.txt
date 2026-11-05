@@ -1,0 +1,37 @@
+pySpinW安装流程：
+在Anaconda Prompt中执行：
+mkdir D:\PySpinW
+mkdir D:\PySpinW\notebooks
+
+创建Python环境，官方推荐Python3.12：
+conda create --prefix D:\PySpinW\env python=3.12 -y
+
+conda activate D:\PySpinW\env
+激活成功后，检查一下版本和位置：
+python --version
+where python
+
+更新pip：
+python -m pip install --upgrade pip
+
+安装pySpinW：
+python -m pip install pyspinw==1.1.0b2
+
+安装JupyterLab和Python内核：
+python -m pip install jupyterlab ipykernel
+python -m ipykernel install --user --name pyspinw --display-name "Python (pySpinW)"
+
+检查步骤：
+python -m pip show pyspinw
+python -m pip check
+
+
+启动代码：
+1. Activate pySpinW environment
+conda activate D:\PySpinW\env
+
+2. Enter notebook directory
+cd /d D:\PySpinW\notebooks
+
+ 3. Launch JupyterLab
+jupyter lab

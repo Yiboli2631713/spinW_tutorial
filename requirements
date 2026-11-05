@@ -1,0 +1,20 @@
+1. ASE 
+python -m pip install "ase>=3.26.0"
+2. NumPy 
+python -m pip install "numpy>=2.0.0"
+3. packaging 
+python -m pip install packaging
+4. PyCifRW 
+python -m pip install pycifrw
+5. spglib 
+python -m pip install "spglib>=2.7.0"
+6. SciPy 
+python -m pip install scipy
+7. PyOpenGL 
+python -m pip install "pyopengl>=3.1.10"
+8. PySide6-Essentials 
+python -m pip install PySide6-Essentials
+9. Matplotlib 
+python -m pip install "matplotlib>=3.10.5"
+10. imageio
+python -m pip install imageio

@@ -1,0 +1,2 @@
+-r requirements
+pyspinw==1.1.0b2

@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+export QT_QPA_PLATFORM=xcb
+export LIBGL_ALWAYS_SOFTWARE=1
+exec xvfb-run -a -s "-screen 0 1280x1024x24" "$@"

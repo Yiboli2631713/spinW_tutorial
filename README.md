@@ -3,53 +3,27 @@ This is a tutorial for learning [spinW](https://github.com/SpinW/pySpinW)
 
 The Binder environment is at [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yanglonggroup/spinW_tutorial/HEAD)
 
-## Installation
+## Run online with Binder
 
-Use Python 3.12 for these tutorials. pySpinW 1.1.0b2 requires Python 3.11 or newer, below 3.15. The instructions below install pySpinW and JupyterLab in a separate environment.
+Click the Binder badge, wait for JupyterLab to open, and open a tutorial in `ipynb/`. Run its cells in order. The first import cell automatically starts a virtual display on headless Linux; the structure plots use `snapshot()` so the images appear inside the notebook.
 
-### 1. Download the tutorials and create an environment
+`environment.yml` selects Python 3.12 and installs the Python packages, Xvfb, Qt support libraries, and Mesa software OpenGL from Conda/PyPI. It replaces the old requirements file; no separate runtime, apt, or startup files are needed.
+
+## Installation on Linux
+
+Install Conda or Miniforge, then run:
 
 ```bash
 git clone https://github.com/yanglonggroup/spinW_tutorial.git
 cd spinW_tutorial
-python -m venv .venv
-```
-
-On macOS/Linux, use `python3 -m venv .venv` if the `python` command is unavailable. Make sure the selected interpreter is Python 3.12.
-
-Activate the environment in Windows Command Prompt:
-
-```bat
-.venv\Scripts\activate.bat
-```
-
-Or in macOS/Linux:
-
-```bash
-source .venv/bin/activate
-```
-
-### 2. Install pySpinW and notebook dependencies
-
-Run these commands from the repository directory after activating the environment:
-
-```bash
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate spinw-tutorial
 python -m pip check
-```
-
-The `requirements.txt` file includes pySpinW, its scientific Python and Qt/OpenGL dependencies, and the Jupyter tools used to run the notebooks.
-
-### 3. Check the installation and open the notebooks
-
-```bash
-python -c "from pyspinw import *; print('pySpinW import successful')"
 jupyter lab
 ```
 
-In JupyterLab, open the `ipynb/` folder and choose Tutorial 1, 2, 3, or 4. Use the Python kernel from the activated environment and run the cells in order.
+Open the four tutorials in `ipynb/` and use the Python kernel from this environment. Always run the first import cell before the visualization cells. On a Linux desktop with an existing display, the virtual-display setup is skipped.
 
-The interactive `view()` calls require a desktop display with Qt/OpenGL support. On Linux, install the system libraries listed in the [Qt xcb requirements](https://doc.qt.io/qt-6/linux-requirements.html) if they are missing. For remote or headless use, pySpinW also provides `snapshot()`; Qt/OpenGL and a suitable display backend are still required.
+The environment file contains Linux graphics packages for Binder. For a local Windows/macOS desktop, use Python 3.12 in a virtual environment and install `pyspinw==1.1.0b2`, `jupyterlab`, and `ipykernel` with pip instead; a working desktop Qt/OpenGL environment is required.
 
 See the [pySpinW documentation](https://spinw.org/pyspinw/) for API details.

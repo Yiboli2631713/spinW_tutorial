@@ -45,3 +45,11 @@ libfontconfig1
 libfreetype6
 libglib2.0-0
 libdbus-1-3
+
+# Virtual display and software OpenGL
+xvfb
+xauth
+x11-utils
+mesa-utils
+libgl1-mesa-dri
+libglx-mesa0

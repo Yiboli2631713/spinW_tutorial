@@ -13,6 +13,7 @@ dependencies:
   - libgl
   - libegl
   - libopengl
+  - dbus
   - xcb-util-cursor
   - xcb-util-wm
   - xcb-util-image

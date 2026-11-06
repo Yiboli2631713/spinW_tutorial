@@ -1,11 +1,11 @@
 # spinW_tutorial
 This is a tutorial for learning [spinW](https://github.com/SpinW/pySpinW)
 
-The Binder environment is at [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yanglonggroup/spinW_tutorial/main?urlpath=lab/tree/ipynb)
+The Binder environment is at [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yanglonggroup/spinW_tutorial/HEAD)
 
 ## Installation
 
-Use Python 3.12 for these tutorials. The instructions below install pySpinW 1.1.0b2 and JupyterLab in a separate environment.
+Use Python 3.12 for these tutorials. pySpinW 1.1.0b2 requires Python 3.11 or newer, below 3.15. The instructions below install pySpinW and JupyterLab in a separate environment.
 
 ### 1. Download the tutorials and create an environment
 
@@ -35,11 +35,11 @@ Run these commands from the repository directory after activating the environmen
 
 ```bash
 python -m pip install --upgrade pip
-python -m pip install -r requirements "pyspinw==1.1.0b2" jupyterlab
+python -m pip install -r requirements.txt
 python -m pip check
 ```
 
-The existing `requirements` file lists the scientific Python and Qt/OpenGL dependencies used by pySpinW.
+The `requirements.txt` file includes pySpinW, its scientific Python and Qt/OpenGL dependencies, and the Jupyter tools used to run the notebooks.
 
 ### 3. Check the installation and open the notebooks
 
